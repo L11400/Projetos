@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Par ou Ímpar? </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 100px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(248, 51, 51, 0.1);
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #000000;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #f1b9d1;
+            color: rgb(243, 7, 125);
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #4aeaff;
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Par ou Ímpar? </h1>
+        <input type="number" id="numero" placeholder="Digite um número">
+        <button onclick="verificarParImpar()">Verificar</button>
+        <p class="result" id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarParImpar() {
+            var numero = document.getElementById("numero").value;
+            var resultado = document.getElementById("resultado");
+
+            if (numero === "") {
+                resultado.textContent = "Por favor, digite um número.";
+                resultado.style.color = "red";
+                return;
+            }
+
+            numero = parseInt(numero);
+
+            if (isNaN(numero)) {
+                resultado.textContent = "Por favor, digite um número válido.";
+                resultado.style.color = "red";
+            } else {
+                if (numero % 2 === 0) {
+                    resultado.textContent = "O número " + numero + " é Par.";
+                    resultado.style.color = "pink";
+                } else {
+                    resultado.textContent = "O número " + numero + " é Ímpar.";
+                    resultado.style.color = "cyan";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

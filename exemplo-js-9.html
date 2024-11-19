@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto contagem de Click</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Projeto Conta Click</h1>
+    </header>
+    <main class="main">
+        <button class="btn__conta">Click</button>
+        <button class="btn__conta--limpa">Reiniciar</button>
+        <span class="span__exibir">0</span>
+    </main>
+
+    <script>
+        const btnConta = document.querySelector('.btn__conta');
+        const btnReiniciar = document.querySelector('.btn__conta--limpa');
+        let cont = 0;
+
+        btnConta.addEventListener('click', function() {
+            cont += 1;
+            document.querySelector('.span__exibir').innerText = cont;
+        });
+
+        btnReiniciar.addEventListener('click', function() {
+            cont = 0;
+            document.querySelector('.span__exibir').innerText = cont;
+        });
+    </script>
+</body>
+</html>

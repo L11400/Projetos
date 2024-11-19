@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Botões</title>
+    <style>
+          button {
+            background-color: #333; /* Cor de fundo escura */
+            color: white; /* Texto em branco */
+            font-size: 16px; /* Tamanho da fonte */
+            padding: 12px 24px; /* Tamanho do botão */
+            border-radius: 8px; /* Bordas arredondadas */
+            border: none; /* Sem borda */
+            cursor: pointer; /* Cursor de mãozinha */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Sombra do botão */
+        }
+
+        /* Efeito de hover (quando o mouse passa por cima) */
+        button:hover {
+            background-color: #555; /* Cor de fundo mais clara quando passar o mouse */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15); /* Aumento da sombra */
+        }
+
+        /* Efeito de foco (quando o botão é clicado ou recebe foco) */
+        button:focus {
+            outline: none; /* Remove a borda padrão do foco */
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2); /* Adiciona um destaque suave no foco */
+        }
+    
+    </style>
+</head>
+<body>
+    <h1> Clique em algum botão </h1>
+    <!-- Botoes que ao clicar envia uma mensagem -->
+
+    <button onclick="alert('Você clicou no botão 1')">Botão 1</button>
+    <button onclick="alert('Você clicou no botão 2')">Botão 2</button>
+    <button onclick="alert('Você clicou no botão 3')">Botão 3</button>
+    <button onclick="alert('Você clicou no botão 4')">Botão 4</button>
+
+</body>
+</html>
